@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mystery+Quest&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preload" href="./img/gus-anim.gif" as="image">
+  </head>
+  <body>
+    <div class="main_page">
+      <div class="wrapper">
+        <div class="main_left">
+          <img src="images/logo black.svg" alt="GoIT" class="logo" />
+          <div class="text_container">
+            <p class="evening">Доброго вечора, ми з України</p>
+            <h1 class="goosek">Бандерогусь</h1>
+            <p class="content_text">
+              Спеціальний бойовий гусак із біолабораторій України. Пишаюся
+              своїми подвигами, бороню Батьківщину та підтримую позитивний дух
+              народу. Слава Україні!
+            </p>
+            <button class="knopka" id="go-to-form-btn">Запустити гуся</button>
+          </div>
+        </div>
+        <img src="images/gus.svg" alt="Banderogoose" />
+      </div>
+    </div>
+    <div class="goose_facts">
+      <img src="images/trezub.svg" alt="tryzub" class="tryzub" />
+      <h2 class="interesting_facts">Цікаві факти про бандерогусей</h2>
+      <p class="goose_desc">
+        Зазвичай бандерогуси — виключно мирні птахи. Але у разі небезпеки можуть
+        атакувати ворога системою надпотужного озброєння. Також нищать
+        психологічно, активуючи високочастотне шипіння та розмахування крилами
+      </p>
+      <div class="wrapper">
+        <div class="goose-fact-item">
+          <img src="images/gus1.svg" alt="goose one" />
+          <h3 class="fact_one">Система навігації</h3>
+          <p class="fact_1_desc">
+            Супутниковий GPS та ехолокатори розпізнають ворожу техніку навіть на
+            етапі збірки
+          </p>
+        </div>
+        <div class="goose-fact-item">
+          <img src="images/gus2.svg" alt="goose two" />
+          <h3 class="fact_one">Очі-тепловізори</h3>
+          <p class="fact_1_desc">
+            Допомагають виявити характер сигнатури об’єктів та значно підвищують
+            точність удару
+          </p>
+        </div>
+        <div class="goose-fact-item">
+          <img src="images/gus3.svg" alt="goode three" />
+          <h3 class="fact_one">Байракрила</h3>
+          <p class="fact_1_desc">
+            Можуть нести 2-4 керовані ракети, що вражають ціль на відстані
+            «ніхріна собі» кілометрів
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="form_page">
+      <form action="#" class="form" id="form" netlify>
+        <img src="images/trezub.svg" alt="Tryzub" />
+        <h4 class="share">Поділися, будь ласка, поштою</h4>
+        <p class="share_desc">та запиши гуся до бандерозагону</p>
+        <div class="inp_cont">
+          <label for="user-name" class="inp">Ім'я</label>
+          <input
+            type="text"
+            class="name"
+            id="user-name"
+            name="Ім'я користувача"
+          />
+        </div>
+        <div class="inp_cont">
+          <label for="user-email" class="inp">Email</label>
+          <input type="email" class="name" id="user-email" name="User email" />
+        </div>
+        <button class="form_button" id="launch-btn">Запустити гуся</button>
+      </form>
+    </div>
+    <script src="js/form.js"></script>
+  </body>
+</html>
