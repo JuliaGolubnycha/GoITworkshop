@@ -2,27 +2,21 @@ html,
 body {
   margin: 0;
   height: 100%;
-  font-family: "Mystery Quest", system-ui;
+  font-family: "Space Mono", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
 :root {
-  --third-family: "Caveat", cursive;
+  --third-family: "Space Mono", cursive;
   --navy-blue: #005bbb;
 }
 
-.mystery-quest-regular {
-  font-family: "Mystery Quest", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .wrapper {
-  width: 1170px;
+  width: 100%;
   margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .main_page,
@@ -37,17 +31,20 @@ body {
 
 .goose_facts {
   text-align: center;
-  padding-top: 48px;
-  padding-bottom: 100px;
+  padding-top: 8px;
+  padding-bottom: 16px;
+  justify-content: space-between;
 }
 
 .text_container {
   border-radius: 64px;
+  margin-left: 16px;
   background: white;
   padding: 60px;
 }
 
 .knopka {
+  margin-bottom: 8px;
   border-radius: 8px;
   border: none;
   padding: 12px 30px;
@@ -57,32 +54,47 @@ body {
   font-size: 14px;
   line-height: 24px;
   cursor: pointer;
+  font-family: "Space Mono";
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .logo {
-  margin-top: 32px;
-  margin-bottom: 60px;
+  margin: 8px 47% 16px;
+  max-width: 12%;
+}
+
+.tryzub {
+  margin: 32px auto 32px auto;
+  max-width: 3%;
+}
+
+.tryzub1 {
+  margin: 32px auto 32px auto;
+  max-width: 20%;
+}
+
+.st {
+  max-width: 70%;
 }
 
 .evening {
   font-family: var(--third-family);
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 20px;
   margin-top: 0;
   margin-bottom: 60px;
 }
 
 .goosek {
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 72px;
+  font-size: 32px;
+  line-height: 36px;
   margin-top: 0;
   margin-bottom: 24px;
 }
 
 .content_text {
-  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   margin-top: 0;
@@ -97,6 +109,7 @@ body {
   width: 772px;
   margin: auto;
   margin-bottom: 24px;
+  max-width: 80%;
 }
 
 .fact_one {
@@ -116,7 +129,13 @@ body {
 }
 
 .goose-fact-item {
-  width: 374px;
+  width: 30%;
+  padding: 16px;
+}
+
+.goose {
+  max-width: 50%;
+  max-height: 128px;
 }
 
 .interesting_facts {
@@ -204,3 +223,107 @@ body {
   z-index: 2;
   pointer-events: none;
 }
+
+/* Mobile-first approach */
+
+/* Adjust font sizes and line heights for smaller screens */
+@media (min-width: 961px) {
+  .goose-fact-item {
+    width: 100%; /* Make each fact item take up full width on smaller screens */
+    margin-bottom: 40px; /* Increase bottom margin between items */
+  }
+
+  .form {
+    max-width: 700px; /* Make the form take up full width on smaller screens */
+  }
+
+  .name {
+    width: 100%; /* Make input fields take up full width */
+  }
+
+  .text_container {
+    margin-right: 0;
+    padding-right: 32px;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+
+  .divst {
+    display: flex;
+  }
+
+  .st{
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+}
+
+/* Tablet and desktop screens */
+@media (max-width: 960px) {
+  .wrapper {
+    flex-direction: column; /* Stack columns vertically on larger screens */
+    align-items: center; /* Center columns vertically */
+  } 
+
+  .col-md-6 {
+    width: 100%; /* Make columns take up full width on larger screens */
+    text-align: center; /* Center content horizontally */
+  } 
+
+  .logo {
+    margin: 8px auto 32px auto; /* Center logo vertically and horizontally */
+    display: block; /* Override default inline display */
+    max-width: 128px;
+  }
+
+  .st {
+    max-height: 360px;
+  }
+
+  .text_container {
+    max-width: 500px; /* Limit max width of text container */
+    margin: auto; /* Center text container horizontally */
+    margin-bottom: 8px;
+  }
+
+  .main_page {
+    padding-top: 100px; /* Increase padding for better spacing */
+    padding-bottom: 100px;
+  }
+
+  .goose_facts {
+    padding-top: 8px; /* Adjust padding for better spacing */
+    padding-bottom: 32px;
+    justify-content: center;
+  }
+
+  .tryzub {
+    margin: 16px auto 16px auto;
+    max-width: 30%;
+  }
+
+  .goose-fact-item {
+    max-width: 66%;
+  }
+
+  .goose {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .interesting_facts {
+    margin-top: 48px; /* Adjust margin for better spacing */
+  }
+
+  .form_page {
+    padding-top: 120px; /* Increase padding for better spacing */
+    padding-bottom: 120px;
+  }
+
+  .form,
+  .name {
+    max-width: 80%;
+  }
+
+} 
